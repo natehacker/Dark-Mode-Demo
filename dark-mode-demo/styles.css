@@ -1,0 +1,58 @@
+/* styles.css */
+:root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #0f172a;
+    --muted: #475569;
+    --card: #f8fafc;
+    --ring: #e2e8f0;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b1220;
+      --fg: #e5e7eb;
+      --muted: #94a3b8;
+      --card: #0f172a;
+      --ring: #1f2937;
+    }
+  }
+  
+  :root[data-theme="dark"] {
+    --bg: #0b1220;
+    --fg: #e5e7eb;
+    --muted: #94a3b8;
+    --card: #0f172a;
+    --ring: #1f2937;
+  }
+  
+  :root[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #0f172a;
+    --muted: #475569;
+    --card: #f8fafc;
+    --ring: #e2e8f0;
+  }
+  
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji";
+  }
+  
+  .container {
+    max-width: 720px; margin: 3rem auto; padding: 1.25rem;
+    border: 1px solid var(--ring); border-radius: 14px; background: var(--card);
+  }
+  
+  .toggle {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: .5rem .75rem; border-radius: 9999px; border: 1px solid var(--ring);
+    background: transparent; color: var(--fg); cursor: pointer;
+  }
+  
+  kbd { border: 1px solid var(--ring); padding: .1rem .35rem; border-radius: 6px; }
+  

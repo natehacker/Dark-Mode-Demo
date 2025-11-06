@@ -1,0 +1,44 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nate Louissaint • Light Switch Toggle</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      // Prevent theme flash on load
+      (function () {
+        try {
+          const stored = localStorage.getItem("theme");
+          if (stored === "dark" || stored === "light") {
+            document.documentElement.setAttribute("data-theme", stored);
+          }
+        } catch (_) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header style="display:flex;justify-content:space-between;align-items:center">
+        <h1 style="margin:0">Nate Louissaint Light Switch Toggle</h1>
+        <button id="theme-toggle" class="toggle" aria-label="Toggle dark mode" aria-pressed="false">
+          <span id="theme-icon" aria-hidden="true">🌞</span>
+          <span id="theme-label">Light</span>
+        </button>
+      </header>
+      <p>Respects <code>prefers-color-scheme</code>, persists choice, and avoids FOUC.</p>
+      <p>Keyboard: press <kbd>T</kbd> to toggle.</p>
+      <hr />
+      <p>
+        Follow me for more tutorials on 
+        <a href="https://www.linkedin.com/in/nathan-louissaint-3a17a3387/" target="_blank" rel="noopener noreferrer">LinkedIn</a> 
+        and get the code on 
+        <a href="https://www.linkedin.com/in/nathan-louissaint-3a17a3387/" target="_blank" rel="noopener noreferrer">GitHub</a>.
+      </p>
+      
+      
+    </div>
+    <script src="theme.js" defer></script>
+  </body>
+</html>
