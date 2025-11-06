@@ -6,7 +6,7 @@ Respects user system preferences, saves theme state in `localStorage`, and avoid
 ---
 
 ## 🚀 Live Demo
-Check out the demo here: [Dark Mode Demo](https://natehacker.github.io/Dark-Mode-Demo/)
+Check out the demo here: [Dark Mode Demo](https://natehacker.github.io/Dark-Mode/)
 
 ---
 
